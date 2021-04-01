@@ -36,7 +36,7 @@ class Car {
     get maxSpeed() { return this.#maxSpeed }
     set maxSpeed(value) { 
         if (typeof value !== 'number') throw new Error('Неверный тип')
-        if (value >= 100 && value < 300) 
+        if (value >= 100 && value <= 300) 
             this.#maxSpeed = value
         else throw new Error('Невалидная скорость')
     }
@@ -44,7 +44,7 @@ class Car {
     get maxFuelVolume() { return this.#maxFuelVolume }
     set maxFuelVolume(value) { 
         if (typeof value !== 'number') throw new Error('Неверный тип')
-        if (value >= 5 && value < 20) 
+        if (value >= 5 && value <= 20) 
             this.#maxFuelVolume = value
         else throw new Error('Невалидное число')
     }
